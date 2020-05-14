@@ -55,7 +55,7 @@ This class method should return all `Artist` instances.
 
 #### `Artist#add_song`
 
-This instance method exists to tell a pased in `Song` instance it belongs to
+This instance method exists to tell a passed in `Song` instance it belongs to
 _this_ `Artist` instance.
 
 #### `Artist#songs`
@@ -78,7 +78,7 @@ This instance methods outputs the names of all songs associated with this
 
 ### `Song` class
 
-A `Song` should be iniitialized with a name and have attribute accessors for
+A `Song` should be initialized with a name and have attribute accessors for
 **name** and **artist**. The `Song` class should have an `@@all` class variable
 and store all `Song` instances in this variable.
 
