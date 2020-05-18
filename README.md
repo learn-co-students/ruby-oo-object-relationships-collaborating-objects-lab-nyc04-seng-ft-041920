@@ -104,8 +104,7 @@ This method will do four things:
 
 You may have seen something similar in the past where we have the instance of
 the artist. If we had the artist object, we could simply assign the artist to
-the song with some code that looks like this: `our_song_instance.artist =
-our_artist_instance`. Since we only have the artist name as a string (not an
+the song with some code that looks like this: `our_song_instance.artist = our_artist_instance`. Since we only have the artist name as a string (not an
 instance of the Artist class), we'll create a method that takes in the name and
 gets the artist object. Let's call this `Song#artist_name=`.
 
@@ -116,23 +115,23 @@ with the `Artist` class:
 
 1. Turn the artist's name as a string into an `Artist` object
 
-    First we need to get the instance of the `Artist` class that represents that
-    artist. There are two possibilities here:
+   First we need to get the instance of the `Artist` class that represents that
+   artist. There are two possibilities here:
 
-    1. Either we have to create that `Artist` instance
-    2. Or it already exists and we have to find that `Artist` instance.
+   1. Either we have to create that `Artist` instance
+   2. Or it already exists and we have to find that `Artist` instance.
 
-    To achieve this, we'll need to collaborate with the `Artist` class. We want to
-    send an artist's name (a string--remember we are getting this from the
-    parsed filename) to the `Artist` class to achieve the functionality described
-    above in #1 and #2. This sounds like a great place to use method
-    `Artist.find_or_create_by_name`.
+   To achieve this, we'll need to collaborate with the `Artist` class. We want to
+   send an artist's name (a string--remember we are getting this from the
+   parsed filename) to the `Artist` class to achieve the functionality described
+   above in #1 and #2. This sounds like a great place to use method
+   `Artist.find_or_create_by_name`.
 
 2. Assign the song to the artist (Since an artist has many songs, we'll want to
    make this association)
 
-    Now that we have the artist instance, we'll want to again collaborate with
-    the `Artist` class by calling on the `Artist#add_song(some_song)` method.
+   Now that we have the artist instance, we'll want to again collaborate with
+   the `Artist` class by calling on the `Artist#add_song(some_song)` method.
 
 ### `MP3Importer` class
 
